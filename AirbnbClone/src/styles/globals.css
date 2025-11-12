@@ -1,0 +1,329 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.calendar-wrapper {
+  display: block;
+  width: 100%; /* Adjust to fit your page layout */
+  margin-top: 20px; /* Add some space */
+}
+
+.custom-calendar {
+  border: none; /* Optional: remove borders */
+  box-shadow: none; /* Optional: remove shadow */
+  width: auto; /* Ensure it fits the container */
+}
+input:focus-visible {
+  border: none !important;
+}
+
+.calendar-container {
+  padding: 20px; /* Ensure proper spacing around the calendar */
+}
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  /* font-family: Arial, Helvetica, sans-serif;
+   */
+   font-family: "Outfit", sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .search-form{
+    font-size: 10px !important;
+   
+  }
+  .search-input{
+    margin-top: 6px !important;
+   
+  }
+  .icon-text{
+    font-size: 10px;
+    line-height: 13px;
+    text-align: center;
+  }
+  .icon-img{
+    width: 80px !important;
+    padding-bottom: 20px;
+}
+.flex-col-sm{
+  display: flex;
+  flex-direction: column;
+}
+.p-2-sm{
+  padding: 20px;
+}
+}
+@media screen and (max-width: 1300px) {
+listing{
+  padding: 50px !important;
+}
+}
+/* latin */
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.bunny.net/outfit/files/outfit-latin-300-normal.woff2) format('woff2'), url(https://fonts.bunny.net/outfit/files/outfit-latin-300-normal.woff) format('woff'); 
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.bunny.net/outfit/files/outfit-latin-ext-300-normal.woff2) format('woff2'), url(https://fonts.bunny.net/outfit/files/outfit-latin-ext-300-normal.woff) format('woff'); 
+  unicode-range: U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.bunny.net/outfit/files/outfit-latin-400-normal.woff2) format('woff2'), url(https://fonts.bunny.net/outfit/files/outfit-latin-400-normal.woff) format('woff'); 
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.bunny.net/outfit/files/outfit-latin-ext-400-normal.woff2) format('woff2'), url(https://fonts.bunny.net/outfit/files/outfit-latin-ext-400-normal.woff) format('woff'); 
+  unicode-range: U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.bunny.net/outfit/files/outfit-latin-500-normal.woff2) format('woff2'), url(https://fonts.bunny.net/outfit/files/outfit-latin-500-normal.woff) format('woff'); 
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.bunny.net/outfit/files/outfit-latin-ext-500-normal.woff2) format('woff2'), url(https://fonts.bunny.net/outfit/files/outfit-latin-ext-500-normal.woff) format('woff'); 
+  unicode-range: U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.bunny.net/outfit/files/outfit-latin-600-normal.woff2) format('woff2'), url(https://fonts.bunny.net/outfit/files/outfit-latin-600-normal.woff) format('woff'); 
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.bunny.net/outfit/files/outfit-latin-ext-600-normal.woff2) format('woff2'), url(https://fonts.bunny.net/outfit/files/outfit-latin-ext-600-normal.woff) format('woff'); 
+  unicode-range: U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.bunny.net/outfit/files/outfit-latin-700-normal.woff2) format('woff2'), url(https://fonts.bunny.net/outfit/files/outfit-latin-700-normal.woff) format('woff'); 
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.bunny.net/outfit/files/outfit-latin-ext-700-normal.woff2) format('woff2'), url(https://fonts.bunny.net/outfit/files/outfit-latin-ext-700-normal.woff) format('woff'); 
+  unicode-range: U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.bunny.net/outfit/files/outfit-latin-800-normal.woff2) format('woff2'), url(https://fonts.bunny.net/outfit/files/outfit-latin-800-normal.woff) format('woff'); 
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.bunny.net/outfit/files/outfit-latin-ext-800-normal.woff2) format('woff2'), url(https://fonts.bunny.net/outfit/files/outfit-latin-ext-800-normal.woff) format('woff'); 
+  unicode-range: U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+
+/* Custom styles for next and previous buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
+  width: 25px !important; /* Adjust the width to make it smaller */
+  height: 25px !important; /* Adjust the height to make it smaller */
+  border-radius: 50%; /* Make the button circular */
+  color: white !important; /* Change the icon color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Optional: Hover effect for buttons */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgb(255, 255, 255);
+  color:#0a0a0a !important;
+}
+
+/* Further customization if needed */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 15px !important; /* Adjust the arrow icon size */
+}
+
+.myswiper{
+  background-color: rgb(255, 255, 255);
+  color:#0a0a0a !important;
+  right:30px;
+}
+
+
+/* Container positioning */
+.swipercontainer {
+  position: relative;
+}
+.swiper-container .swiper-button-next,
+.swiper-container .swiper-button-prev {
+  opacity: 0; /* Initially hide buttons */
+  transition: opacity 0.3s ease; /* Smooth transition for opacity */
+  visibility: hidden; 
+}
+
+.swiper-container:hover .swiper-button-next,
+.swiper-container:hover .swiper-button-prev {
+  opacity: 1; /* Show buttons on hover */
+    visibility: visible; /* Make them visible */
+
+}
+
+/* Custom styles for Swiper buttons */
+.swiper-button-next-custom1,
+.swiper-button-prev-custom2 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: white;
+  padding: 10px;
+  border-radius: 50%; /* Circular button */
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Position the next button on the right side */
+.swiper-button-next-custom1 {
+  right:-13px; /* Adjust this value to control distance from the right */
+}
+
+/* Position the prev button on the left side */
+.swiper-button-prev-custom2 {
+  left: -13px; /* Adjust this value to control distance from the left */
+}
+
+/* Add hover effects */
+.swiper-button-next-custom1:hover,
+.swiper-button-prev-custom2:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Darker on hover */
+}
+
+/* Hide scrollbar for all browsers */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
