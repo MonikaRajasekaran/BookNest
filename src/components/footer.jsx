@@ -59,26 +59,34 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="border-t mt-6 pt-4 text-sm text-gray-600 flex justify-between">
-          <p>
-            © 2024 Booking, Inc. · <Link href="/privacy">Privacy</Link> ·{' '}
-            <Link href="/terms">Terms</Link> · <Link href="/sitemap">Sitemap</Link> ·{' '}
-            <Link href="/company-details">Company details</Link>
-          </p>
-          <div className="flex space-x-4">
-            <span>English (IN)</span>
-            <span>₹ INR</span>
-            <Link href="https://www.facebook.com">
-            <FaFacebook size={24} />
-            </Link>
-            <Link href="https://www.instagram.com">
-            <FaInstagram size={24} />            
-            </Link>
-            <Link href="https://www.twitter.com">
-            <FaTwitter size={24} />
-            </Link>
-          </div>
-        </div>
+       <div className="border-t mt-6 pt-4 text-sm text-gray-600 flex flex-col md:flex-row justify-between gap-4 md:gap-0">
+
+  {/* LEFT SECTION */}
+  <p className="text-center md:text-left leading-relaxed">
+    © 2024 Booking, Inc. · 
+    <Link href="/privacy" className="hover:underline ml-1">Privacy</Link> ·
+    <Link href="/terms" className="hover:underline ml-1">Terms</Link> ·
+    <Link href="/sitemap" className="hover:underline ml-1">Sitemap</Link> ·
+    <Link href="/company-details" className="hover:underline ml-1">Company details</Link>
+  </p>
+
+  {/* RIGHT ICONS & SETTINGS */}
+  <div className="flex flex-wrap items-center justify-center md:justify-end gap-4">
+    <span>English (IN)</span>
+    <span>₹ INR</span>
+
+    <Link href="https://www.facebook.com" className="hover:text-gray-800 transition">
+      <FaFacebook size={22} />
+    </Link>
+    <Link href="https://www.instagram.com" className="hover:text-gray-800 transition">
+      <FaInstagram size={22} />            
+    </Link>
+    <Link href="https://www.twitter.com" className="hover:text-gray-800 transition">
+      <FaTwitter size={22} />
+    </Link>
+  </div>
+</div>
+
       </div>
     </footer>
   );

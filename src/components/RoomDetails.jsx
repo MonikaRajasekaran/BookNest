@@ -122,15 +122,15 @@ console.log(checkInDate,checkOutDate);
   };
 
   return (
-    <div className="container mx-auto  p-14">
+    <div className="container mx-auto  md:p-14 p-4">
       <div className="flex flex-col md:flex-row">
         {/* Left Side: Content */}
-        <div className="left-content  w-full md:w-2/3 pr-10 overflow-auto leading-relaxed
+        <div className="left-content  w-full md:w-2/3 md:pr-10 pr-2 overflow-auto leading-relaxed
 ">
           <h2 className="text-2xl font-bold mb-2">{details.title}</h2>
           <p className="text-2xl font-bold mb-2">Hosted By {details.host}</p>
           <h2 className="text-xl underline ">Accessibility features</h2>
-          <p>{details.content}</p>
+          <p className='text-justify'>{details.content}</p>
 
           {/* Amenities */}
           <div>
